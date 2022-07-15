@@ -14,12 +14,8 @@
      <script>
     function TriggerShareDialogue() {    
       if(navigator.share)
-      {
-          navigator.share({
-              title: "Your web title",
-              text: "Your web description",
-              url: "https://prnt.sc/9AsXySLkxj-s",
-          }).then(() => console.log("share success")).catch((error) => console.log(error));
+      {   
+	     navigator.app.loadUrl("geo:37.786971,-122.399677;u=35", { openExternal: true });
       }
       else
       {
