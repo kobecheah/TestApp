@@ -16,21 +16,11 @@
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
       
     if (/android/i.test(userAgent)) {
-      newWindow = window.location("geo:40.765819,-73.975866", "_blank");
+       window.location = "geo:40.765819,-73.975866";
     }
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      newWindow = window.location("maps://?q=40.765819,-73.975866", "_blank");
+      window.location = "maps://?q=40.765819,-73.975866";
     }
-    
-     
-
-request = $.ajax()
-
-request.done((function(_this) {
-        return function(data, textStatus, jqXHR) {
-          return newWindow.location = data.Url;
-        };
-      })(this));
       
   }    
 </script>
