@@ -14,8 +14,15 @@
      <script>
     function TriggerShareDialogue() {    
      
-	        window.location.href = 'https://www.google.com.my/maps/@3.0423361,101.7865766,15z?hl=en&authuser=0','_blank';
+      newWindow = window.open("", "_blank");
 
+request = $.ajax()
+
+request.done((function(_this) {
+        return function(data, textStatus, jqXHR) {
+          return newWindow.location = data.Url;
+        };
+      })(this));
       
   }    
 </script>
