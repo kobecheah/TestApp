@@ -11,6 +11,22 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
     </script>
+     <script>
+    function TriggerShareDialogue() {    
+      if(navigator.share)
+      {
+          navigator.share({
+              title: "Your web title",
+              text: "Your web description",
+              url: "https://prnt.sc/9AsXySLkxj-s",
+          }).then(() => console.log("share success")).catch((error) => console.log(error));
+      }
+      else
+      {
+          alert('Sorry. Sharing not available on your device');
+      }
+  }    
+</script>
   </head>
   <body>
     <div class="webgl-content">
