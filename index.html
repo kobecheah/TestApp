@@ -15,7 +15,7 @@
     function TriggerShareDialogue() {    
       if(navigator.share)
       {   
-	     navigator.app.loadUrl("geo:37.786971,-122.399677;u=35", { openExternal: true });
+	     window.open("geo:37.786971,-122.399677;u=35", { openExternal: true });
       }
       else
       {
