@@ -14,14 +14,14 @@ type="text/javascript"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
-    function OpenMap(str) {    
+    function OpenMap(latitude,longitude) {    
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     
     if (/android/i.test(userAgent)) {
-       window.location = 'google.navigation:q=' + "'" + str + "'"+ '&mode=d';
+       window.location = 'google.navigation:q='  + latitude + "," + longitude+ '&mode=d';
     }
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      window.open('maps://?q=' + str, '_system');
+      window.open('maps://?q=' + latitude+","+ longitude, '_system');
     }
       
   }    
