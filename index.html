@@ -10,9 +10,7 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
-    </script>
-     <script>
-    function TriggerShareDialogue() {    
+    function OpenMap() {    
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
       
     if (/android/i.test(userAgent)) {
@@ -23,7 +21,8 @@
     }
       
   }    
-</script>
+
+    </script>
   </head>
   <body>
     <div class="webgl-content">
