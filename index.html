@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+   <allow-intent href="maps:*" />
+   <allow-intent href="geo:*" />
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Test</title>
@@ -14,7 +16,7 @@ type="text/javascript"></script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
     function OpenMap(str) {    
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      23.3728831,85.3372199&mode=d
+    
     if (/android/i.test(userAgent)) {
        window.location = 'google.navigation:q=' + "'" + str + "'"+ '&mode=d';
     }
